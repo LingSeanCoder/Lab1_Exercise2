@@ -1,0 +1,45 @@
+/* css/tokens.css */
+
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f5f7fa;
+  --color-text: #1a1f2b;
+  --color-text-muted: #55607a;
+  --color-primary: #0b4fd1;
+  --color-primary-contrast: #ffffff;
+  --color-border: #d4d9e3;
+  --color-badge-bg: #e6edfb;
+  --color-badge-text: #0b3a91;
+  --color-focus-ring: #0b4fd1;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  --transition-theme: 200ms ease;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0f1320;
+  --color-surface: #1a2032;
+  --color-text: #f2f5fb;
+  --color-text-muted: #aeb8cf;
+  --color-primary: #7aa6ff;
+  --color-primary-contrast: #0a1024;
+  --color-border: #2c3550;
+  --color-badge-bg: #223056;
+  --color-badge-text: #dbe6ff;
+  --color-focus-ring: #7aa6ff;
+}
