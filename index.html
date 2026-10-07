@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drum Kit — Nguyễn Đình Sang</title>
+  <meta name="description" content="Keyboard-driven drum kit with polyphonic audio and beat recorder.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; media-src 'self'">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/drum.css">
+  <script defer src="js/audio.js"></script>
+  <script defer src="js/recorder.js"></script>
+  <script defer src="js/keymap.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <h1>Drum Kit</h1>
+    <p>Press A S D F G H J K L or click a pad.</p>
+  </header>
+
+  <main id="main">
+    <section aria-label="Drum pads">
+      <div class="drum-kit" role="group" aria-label="Playable drum pads">
+        <button type="button" class="drum-pad" data-key="a" data-sound="assets/sounds/kick.wav" aria-label="Kick drum, key A">
+          <span class="drum-pad__key" aria-hidden="true">A</span>
+          <span class="drum-pad__sound" aria-hidden="true">Kick</span>
+        </button>
+        <button type="button" class="drum-pad" data-key="s" data-sound="assets/sounds/snare.wav" aria-label="Snare, key S">
+          <span class="drum-pad__key" aria-hidden="true">S</span>
+          <span class="drum-pad__sound" aria-hidden="true">Snare</span>
+        </button>
+        <button type="button" class="drum-pad" data-key="d" data-sound="assets/sounds/hihat.wav" aria-label="Hi-Hat, key D">
+          <span class="drum-pad__key" aria-hidden="true">D</span>
+          <span class="drum-pad__sound" aria-hidden="true">Hi-Hat</span>
+        </button>
+        <button type="button" class="drum-pad" data-key="f" data-sound="assets/sounds/tom.wav" aria-label="Tom, key F">
+          <span class="drum-pad__key" aria-hidden="true">F</span>
+          <span class="drum-pad__sound" aria-hidden="true">Tom</span>
+        </button>
+        <button type="button" class="drum-pad" data-key="g" data-sound="assets/sounds/rim.wav" aria-label="Rim, key G">
+          <span class="drum-pad__key" aria-hidden="true">G</span>
+          <span class="drum-pad__sound" aria-hidden="true">Rim</span>
+        </button>
+        <button type="button" class="drum-pad" data-key="h" data-sound="assets/sounds/clap.wav" aria-label="Clap, key H">
+          <span class="drum-pad__key" aria-hidden="true">H</span>
+          <span class="drum-pad__sound" aria-hidden="true">Clap</span>
+        </button>
+        <button type="button" class="drum-pad" data-key="j" data-sound="assets/sounds/crash.wav" aria-label="Crash, key J">
+          <span class="drum-pad__key" aria-hidden="true">J</span>
+          <span class="drum-pad__sound" aria-hidden="true">Crash</span>
+        </button>
+        <button type="button" class="drum-pad" data-key="k" data-sound="assets/sounds/ride.wav" aria-label="Ride, key K">
+          <span class="drum-pad__key" aria-hidden="true">K</span>
+          <span class="drum-pad__sound" aria-hidden="true">Ride</span>
+        </button>
+        <button type="button" class="drum-pad" data-key="l" data-sound="assets/sounds/cowbell.wav" aria-label="Cowbell, key L">
+          <span class="drum-pad__key" aria-hidden="true">L</span>
+          <span class="drum-pad__sound" aria-hidden="true">Cowbell</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nguyễn Đình Sang</p>
+  </footer>
+</body>
+</html>
