@@ -3,9 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nguyễn Tất Tấn Tài — Enterprise Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Nguyễn Tất Tấn Tài, enterprise developer building resilient, accessible web systems with vanilla HTML, CSS, and JavaScript.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; style-src 'self'; script-src 'self'">
+  <title>Nguyễn Đình Sang — Enterprise Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Nguyễn Đình Sang, enterprise developer building resilient, accessible web systems with vanilla HTML, CSS, and JavaScript.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; style-src 'self'; script-src 'self' 'unsafe-inline'">
+  <script>
+    /* Inline FOUC guard: must run before CSS to set theme before first paint. */
+    (() => {
+      'use strict';
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme =
+        stored === 'dark' || stored === 'light'
+          ? stored
+          : (prefersDark ? 'dark' : 'light');
+    })();
+  </script>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -17,7 +29,7 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
-    <section class="container" aria-label="Site navigation and preferences">
+    <div class="container site-header__inner">
       <nav aria-label="Primary">
         <ul role="list" class="nav-list">
           <li><a href="#hero-heading">Home</a></li>
@@ -29,22 +41,30 @@
       <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
         <span aria-hidden="true">☀</span>
       </button>
-    </section>
+    </div>
   </header>
 
   <main id="main-content">
     <section class="hero container" aria-labelledby="hero-heading">
-      <h1 id="hero-heading">Nguyễn Tất Tấn Tài</h1>
-      <p>Enterprise developer building resilient web systems.</p>
-      <a href="#contact-heading" class="cta">Get in touch</a>
+      <div class="hero__content">
+        <h1 id="hero-heading">Nguyễn Đình Sang</h1>
+        <p>Enterprise developer building resilient web systems.</p>
+        <a href="#contact-heading" class="cta">Get in touch</a>
+      </div>
       <picture class="hero-media">
+        <source
+          type="image/webp"
+          srcset="https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=400&q=75&fm=webp&fit=crop&crop=faces 400w,
+                  https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=800&q=75&fm=webp&fit=crop&crop=faces 800w"
+          sizes="(min-width: 768px) 50vw, 100vw">
         <img
-          src="https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=800"
+          src="https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=800&q=75&fit=crop&crop=faces"
           width="800"
           height="1000"
-          alt="Portrait of Nguyễn Tất Tấn Tài"
+          alt="Portrait of Nguyễn Đình Sang"
           loading="eager"
-          decoding="async">
+          decoding="async"
+          fetchpriority="high">
       </picture>
     </section>
 
@@ -123,7 +143,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Nguyễn Tất Tấn Tài</p>
+    <p>© 2026 Nguyễn Đình Sang</p>
   </footer>
 </body>
 </html>
