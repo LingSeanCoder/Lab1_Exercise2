@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nguyễn Tất Tấn Tài — Enterprise Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Nguyễn Tất Tấn Tài, enterprise developer building resilient, accessible web systems with vanilla HTML, CSS, and JavaScript.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; style-src 'self'; script-src 'self'">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/theme.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <section class="container" aria-label="Site navigation and preferences">
+      <nav aria-label="Primary">
+        <ul role="list" class="nav-list">
+          <li><a href="#hero-heading">Home</a></li>
+          <li><a href="#skills-heading">Skills</a></li>
+          <li><a href="#projects-heading">Projects</a></li>
+          <li><a href="#contact-heading">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+        <span aria-hidden="true">☀</span>
+      </button>
+    </section>
+  </header>
+
+  <main id="main-content">
+    <section class="hero container" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Nguyễn Tất Tấn Tài</h1>
+      <p>Enterprise developer building resilient web systems.</p>
+      <a href="#contact-heading" class="cta">Get in touch</a>
+      <picture class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=800"
+          width="800"
+          height="1000"
+          alt="Portrait of Nguyễn Tất Tấn Tài"
+          loading="eager"
+          decoding="async">
+      </picture>
+    </section>
+
+    <section class="container" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul role="list" class="skills-grid">
+        <li><span class="skill-badge">TypeScript</span></li>
+        <li><span class="skill-badge">JavaScript</span></li>
+        <li><span class="skill-badge">HTML5</span></li>
+        <li><span class="skill-badge">CSS3</span></li>
+        <li><span class="skill-badge">Node.js</span></li>
+        <li><span class="skill-badge">PostgreSQL</span></li>
+        <li><span class="skill-badge">Docker</span></li>
+        <li><span class="skill-badge">Accessibility</span></li>
+      </ul>
+    </section>
+
+    <section class="container" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <ul role="list" class="projects-grid">
+        <li>
+          <article class="project-card" data-category="frontend">
+            <header class="card-header">
+              <h3>Distributed State Engine</h3>
+              <span class="badge">TypeScript</span>
+            </header>
+            <p>Lightweight event bus built without external libraries.</p>
+            <footer class="card-footer">
+              <a href="#" aria-label="View State Engine repository">Source Code</a>
+            </footer>
+          </article>
+        </li>
+        <li>
+          <article class="project-card" data-category="backend">
+            <header class="card-header">
+              <h3>Edge Auth Gateway</h3>
+              <span class="badge">Node.js</span>
+            </header>
+            <p>Zero-dependency authentication gateway with signed sessions.</p>
+            <footer class="card-footer">
+              <a href="#" aria-label="View Edge Auth Gateway repository">Source Code</a>
+            </footer>
+          </article>
+        </li>
+        <li>
+          <article class="project-card" data-category="tooling">
+            <header class="card-header">
+              <h3>CSS Token Linter</h3>
+              <span class="badge">JavaScript</span>
+            </header>
+            <p>Static analyzer that enforces design-token discipline across stylesheets.</p>
+            <footer class="card-footer">
+              <a href="#" aria-label="View CSS Token Linter repository">Source Code</a>
+            </footer>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <form id="contact-form" class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required minlength="2" autocomplete="name">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required minlength="10" rows="5"></textarea>
+
+        <button type="submit">Send message</button>
+      </form>
+      <p role="status" aria-live="polite" id="form-status"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Nguyễn Tất Tấn Tài</p>
+  </footer>
+</body>
+</html>
