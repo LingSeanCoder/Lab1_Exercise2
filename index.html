@@ -5,19 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nguyễn Đình Sang — Enterprise Developer Portfolio</title>
   <meta name="description" content="Portfolio of Nguyễn Đình Sang, enterprise developer building resilient, accessible web systems with vanilla HTML, CSS, and JavaScript.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; style-src 'self'; script-src 'self' 'unsafe-inline'">
-  <script>
-    /* Inline FOUC guard: must run before CSS to set theme before first paint. */
-    (() => {
-      'use strict';
-      const stored = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.dataset.theme =
-        stored === 'dark' || stored === 'light'
-          ? stored
-          : (prefersDark ? 'dark' : 'light');
-    })();
-  </script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; style-src 'self'; script-src 'self'">
+  <script src="js/fouc.js"></script>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
